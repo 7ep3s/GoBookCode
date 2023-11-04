@@ -1,1 +1,1 @@
-get-childitem -Recurse *.exe | Select-Object -ExpandProperty fullname | ForEach-Object {remove-item $_ -Force}
+get-childitem -Recurse ($PSScriptRoot+"\*.exe") | Select-Object -ExpandProperty fullname | ForEach-Object {remove-item $_ -Force}
